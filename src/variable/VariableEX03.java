@@ -67,9 +67,9 @@ public class VariableEX03 {
 //  System.out.print("2x1=2");  // 2x1=2를 출력한 뒤 줄을 바꾸지 않는다.
         int dan = 2;
         for (dan = 2; dan <= 9; dan++) {
-            for (int j = 1; j <= 9; j++) {
+            for (int j = 0; j < 9; j++) {
                 int z = 1;
-                System.out.print(dan + j + "x" + z + "=" + dan * j + " ");
+                System.out.print(dan + j + "x" + z + "=" + dan * (j + 1) + " ");
             }
             System.out.println();
         }
