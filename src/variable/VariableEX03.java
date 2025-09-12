@@ -2,6 +2,8 @@ package variable;
 
 import jdk.swing.interop.SwingInterOpUtils;
 
+import java.util.Scanner;
+
 public class VariableEX03 {
     public static void ex01() {
         // 구구단 출력하기
@@ -9,7 +11,9 @@ public class VariableEX03 {
         // 2 x 2 = 4
         // ...
         // 2 x 9 = 18
-        int dan = 2;  // 이 곳에 원하는 구구단을 넣으면 된다.
+        Scanner sc = new Scanner(System.in);
+        System.out.println("원하는 구구단 숫자를 입력하세요");
+        int dan = sc.nextInt();
         int i;
         System.out.println("구구단 출력하기");
         for (i = 1; i <= 9; i++) {
@@ -62,6 +66,13 @@ public class VariableEX03 {
         // 참고할코드
 //  System.out.print("2x1=2");  // 2x1=2를 출력한 뒤 줄을 바꾸지 않는다.
         int dan = 2;
+        for (dan = 2; dan <= 9; dan++) {
+            for (int j = 0; j < 9; j++) {
+                int z = 1;
+                System.out.print(dan + j + "x" + z + "=" + dan * (j + 1) + " ");
+            }
+            System.out.println();
+        }
 
 //  String.format
 //  ("%nd", 숫자) %d는 정수, n이 양수이면 숫자 나중에 출력, 음수이면 먼저 출력
@@ -178,8 +189,8 @@ public class VariableEX03 {
     public static void main(String[] args) {
 //  ex01();
 //  ex02();
-  ex03();
-//  ex04();
+//  ex03();
+  ex04();
 //  ex05();
 //  ex06();
 //  ex07();
