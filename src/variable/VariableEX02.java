@@ -65,7 +65,7 @@ public class VariableEX02 {
         //카페라떼 : 2500
         //밀크티 : 3000
         //기타 : 5000
-        String order = "아메리카노";
+        String order = "아무거나";
         int price = 0;
         if (order.equals("아메리카노")) {
             price = 2000;
@@ -163,9 +163,9 @@ public class VariableEX02 {
 //    ex02();
 //    ex03();
 //    ex04();
-//    ex05();
+    ex05();
 //    ex06();
-    ex07();
+//    ex07();
 //        ex08();
     }
 }
