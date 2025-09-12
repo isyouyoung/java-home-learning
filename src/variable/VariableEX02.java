@@ -1,5 +1,7 @@
 package variable;
 
+import java.util.Scanner;
+
 public class VariableEX02 {
     public static void ex01() {
         //점수에 따른 학점(if문)
@@ -74,7 +76,7 @@ public class VariableEX02 {
         } else price = 5000;
         order = "기타";
         System.out.println("주문하신 " + order + "는(은) : " + price + "원입니다.");
-    } // 수정필요
+    }
 
     public static void ex05() {
         //월에 따른 계절
@@ -82,10 +84,23 @@ public class VariableEX02 {
         //6 ~ 8 : 여름
         //9 ~ 11: 가을
         //12 ~ 2: 겨울
-        int month = 7;
         String season = "";  // "봄", "여름", "가을", "겨울"
 
+        Scanner sc = new Scanner(System.in);
+        System.out.print("월을 입력하세요: ");
+        int month = sc.nextInt();
 
+        if (month >= 3 && month <= 5) {
+            season = "봄";
+        } else if (month >= 6 && month <= 8) {
+            season = "여름";
+        } else if (month >= 9 && month <= 12) {
+            season = "가을";
+        } else if (month > 0 && month <= 2) {
+            season = "겨울";
+        } else {
+            System.out.println("1~12월 사이의 숫자를 입력하세요");
+        }
         System.out.println(month + "월은 " + season + " 계절");
     }
 
@@ -95,19 +110,37 @@ public class VariableEX02 {
         //4 ~ 6 : 2분기
         //7 ~ 9 : 3분기
         //10 ~ 12 : 4분기
-        int m = 12;
         int s = 0;
+
+        Scanner sc = new Scanner(System.in);
+        System.out.print("월을 입력하세요: ");
+        int m = sc.nextInt();
+
+        if (m >= 1 && m <= 3) {
+            s = 1;
+        } else if (m >= 4 && m <= 6) {
+            s = 2;
+        } else if (m >= 7 && m <= 9) {
+            s = 3;
+        } else if (m >= 10 && m <= 12) {
+            s = 4;
+        } else {
+            System.out.println("1~12월 사이의 숫자를 입력하세요");
+        }
 
 
         System.out.println(m + "월은 " + s + "분기");
     }
 
     public static void ex07() {
-        //10일 후 요일은?
-        int day = 1;    // 현재 일수
-        int nDay = 10;  // 지날 일수
-        int ncDay = 0;  // 지난 일수
-        ncDay = day + nDay;
+        System.out.println("현재 일수를 입력하세요 : ");
+        Scanner sc = new Scanner(System.in);
+        int day = sc.nextInt();
+        System.out.println("지날 일수를 입력하세요 : ");
+        int nDay = sc.nextInt();
+        int ncDay = day + nDay;
+        System.out.println("지난 일수 :" + ncDay );
+
 
         String weekname = "";   // 요일                 // "월", "화", "수", "목", "금", "토", "일"
         int month = 7;          // 현재 달수
@@ -121,19 +154,18 @@ public class VariableEX02 {
         // 아스키 코드
 //    대문자 -> 소문자, 소문자 -> 대문자
         char ch = 'a';
-
-
+        char upper = 'A';
         System.out.println(ch);
     }
 
     public static void main(String[] args) {
 //    ex01();
 //    ex02();
-        ex03();
+//    ex03();
 //    ex04();
 //    ex05();
 //    ex06();
-//    ex07();
+    ex07();
 //        ex08();
     }
 }
