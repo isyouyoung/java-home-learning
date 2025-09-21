@@ -9,11 +9,16 @@ public class VariableEX04 {
         // 6 ~ 8 : 여름      6 ~ 8
         // 9 ~ 11: 가을      9 ~ 11
         // 12 ~ 2: 겨울      0 ~ 2
-        int month = 1;
+        int month = 5;
         String[] seasons = {"겨울", "봄", "여름", "가을"};
         // 코드 1줄로 해결할 것
-        System.out.println();
+        String season = seasons[month % 12 / 3 ];
+//        0~2 => 인덱스 0 // 0, 1 , 2 => 0
+//        3~5 => 인덱스 1 => 3, 4, 5, => 1
+//        6~8 => 인덱스 2 => 6, 7, 8 => 2
+//        9~11 => 인덱스 3 => 9, 10, 11 => 3
 
+        System.out.println(season);
     }
 
     public static void ex02() {
@@ -21,9 +26,10 @@ public class VariableEX04 {
         // 배열 a: [10, 20, 30, 40, 50]
         int[] a = new int[5];
         // 배열과 인덱스 외 변수 사용 금지
-
-        System.out.println("배열 a: ");
-
+        for (int i = 0; i < a.length; i++) {
+            a[i] = (i+1) * 10;
+        }
+        System.out.println("배열 a: " + Arrays.toString(a));
     }
 
     public static void ex03() {
@@ -32,7 +38,10 @@ public class VariableEX04 {
         char[] a = new char[26];
         char ch = 'A';
 
-        System.out.println("배열 a: ");
+        for (int i = 0; i < a.length; i++) {
+            a[i] = (char)(ch + i);
+        }
+        System.out.println("배열 a: " + Arrays.toString(a));
     }
 
     public static void ex04() {
@@ -52,7 +61,11 @@ public class VariableEX04 {
         // ┌------------------------------------------------┐
         int[] binary = new int[10];  // │ 0 │ 0 │ 0 │ 0 │ 1 │ 0 │ 0 │ 0 │ 1 │ 1 │
         // └------------------------------------------------┘
-        System.out.print("10진수 " + number + " = 2진수 ");
+        for (int i = 0; i < binary.length; i++) {
+            binary[binary.length-i-1] = number % 2;
+            number/=2;
+        }
+        System.out.print("10진수 " + number + " = 2진수 " + Arrays.toString(binary));
 
 
 
@@ -71,6 +84,23 @@ public class VariableEX04 {
         int max = score[0];  // 최댓값
         int min = score[0];  // 최솟값
 
+        for (int i = 0; i < score.length; i++) {
+            total = total + score[i];
+            // 반복문으로 score[0] 부터 4까지 즉 total을 전부 더함
+            System.out.println("현재 total = " + total);
+            if (score[i] > max) {
+                max = score[i];
+                top = i;
+                System.out.println("현재 max = " + max);
+                // ? 왜 출력이 안됨?
+                System.out.println("현재 top = " + top);
+                // ? 왜 출력이 안됨?
+            }
+            if (score[i] < min) {
+                min = score[i];
+                bottom = i;
+            }
+        }
 
         System.out.println("평균: " + (double)total / score.length + "점");
         System.out.println("최대: " + max + "점");
