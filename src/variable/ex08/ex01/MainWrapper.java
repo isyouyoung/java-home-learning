@@ -1,0 +1,29 @@
+package variable.ex08.ex01;
+
+public class MainWrapper {
+
+  public static void main(String[] args) {
+    BankAccount my = new BankAccount();
+    BankAccount you = new BankAccount();
+
+    my.setAccNo("031-21-9874-321");
+
+    my.balanceIn(50000);
+
+    my.balanceOut(1000);
+
+    my.inquiry();
+
+
+    you.setAccNo("032-51-2366-355");
+
+    // 내가 너에게 3만원 이체하기
+    my.transfer(you, 30000);
+    System.out.println("\n이체후 조회\n\n내 계좌\n");
+    my.inquiry();
+    System.out.println("\n이체한 계좌\n");
+    you.inquiry();
+    
+  }
+
+}
