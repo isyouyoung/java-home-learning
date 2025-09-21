@@ -80,15 +80,26 @@ public class VariableEX05 {
                 {4, 4}   // 5층
         };
         // 포문 만는듯
-        for (int i = 0; i < apt.length; i++) {
-            int peoplesu = 0;
-            // apt.length는 똑같이 5임 i는 층이군
-            for (int j = 0; j < apt[i].length; j++) {
-                // 이것도 똑같이 2개씩이겠다 apt[0]이랑 apt[1]이 되니까
-                peoplesu = peoplesu + apt[i][j];
-                // honumber는 실제 호고 apt[i][j]는 반복문에서 나온숫자로 실제 몇명인지 출력
+//        for (int i = 0; i < apt.length; i++) {
+//            int peoplesu = 0;
+//            // apt.length는 똑같이 5임 i는 층이군
+//            for (int j = 0; j < apt[i].length; j++) {
+//                // 이것도 똑같이 2개씩이겠다 apt[0]이랑 apt[1]이 되니까
+//                peoplesu = peoplesu + apt[i][j];
+//                // honumber는 실제 호고 apt[i][j]는 반복문에서 나온숫자로 실제 몇명인지 출력
+//            }
+//            System.out.printf("%d층: %d명\n", i+1 , peoplesu);
+//            System.out.println(String.format("%d층: %d명\n", i+1 , peoplesu));
+//        }
+
+        int idx = 1;
+        for (int [] floor : apt){
+            int totalPeople = 0;
+            for ( int peoplesu : floor){
+                totalPeople += peoplesu;
             }
-            System.out.printf("%d층: %d명\n", i+1 , peoplesu);
+            System.out.println(String.format("%d층 %d명",idx,totalPeople));
+            idx++;
         }
     }
 
@@ -115,7 +126,10 @@ public class VariableEX05 {
             }
             System.out.println();
             // 끼얗호응~
-        }
+        } // 향상 포문 + String. format으로 바꿔서 오기 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
+        // 구구단도 해보기 //
+
     }
 
     public static void ex05() {
@@ -145,9 +159,9 @@ public class VariableEX05 {
 
     public static void main(String[] args) {
 //  ex01();
-  ex02();
+//  ex02();
 //  ex03();
-//  ex04();
+  ex04();
 //  ex05();
 
 //        공부 + 숙제완료 2
