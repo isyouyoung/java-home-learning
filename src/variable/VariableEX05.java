@@ -142,5 +142,7 @@ public class VariableEX05 {
   ex04();
 //  ex05();
 
+//        공부 + 숙제완료 2
+
     }
 }
