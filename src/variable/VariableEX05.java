@@ -1,5 +1,7 @@
 package variable;
 
+import java.util.Arrays;
+
 public class VariableEX05 {
     public static void ex01() {
         // 2~9단까지 전체 구구단 결과 저장하고 출력하기
@@ -46,15 +48,21 @@ public class VariableEX05 {
                 {4, 4}   // 501호, 502호
         };
         // 구구처럼 포문인가?
-        for (int i = 0; i < apt.length; i++) {
-            // apt.length는 5임 5개니까 배열이긴해도
-            for (int j = 0; j < apt[i].length; j++) {
-                // 이건 2개씩이겠다 apt[0]이랑 apt[1]이 되니까
-                int hoNumber = (i + 1) * 100 + (j + 1); // 호넘버는 = 101호 / 102호, 그담 201호 202호
-                System.out.printf("%d호: %d명\n", hoNumber, apt[i][j]);
-                // honumber는 실제 호고 apt[i][j]는 반복문에서 나온숫자로 실제 몇명인지 출력
+//        for (int i = 0; i < apt.length; i++) {
+//            // apt.length는 5임 5개니까 배열이긴해도
+//            for (int j = 0; j < apt[i].length; j++) {
+//                // 이건 2개씩이겠다 apt[0]이랑 apt[1]이 되니까
+//                int hoNumber = (i + 1) * 100 + (j + 1); // 호넘버는 = 101호 / 102호, 그담 201호 202호
+//                System.out.printf("%d호: %d명\n", hoNumber, apt[i][j]);
+//                // honumber는 실제 호고 apt[i][j]는 반복문에서 나온숫자로 실제 몇명인지 출력
+//            }
+//        }
+        for (int [] floor : apt){
+            for (int ho : floor){
+                System.out.println(String.format("%d",ho));
             }
         }
+
     }
 
     public static void ex03() {
@@ -137,9 +145,9 @@ public class VariableEX05 {
 
     public static void main(String[] args) {
 //  ex01();
-//  ex02();
+  ex02();
 //  ex03();
-  ex04();
+//  ex04();
 //  ex05();
 
     }

@@ -84,7 +84,7 @@ public class VariableEX04 {
         int max = score[0];  // 최댓값
         int min = score[0];  // 최솟값
 
-        for (int i = 0; i < score.length; i++) {
+        for (int i = 1; i < score.length; i++) {
             total = total + score[i];
             // 반복문으로 score[0] 부터 4까지 즉 total을 전부 더함
             System.out.println("현재 total = " + total);
@@ -92,14 +92,14 @@ public class VariableEX04 {
                 max = score[i];
                 top = i;
                 System.out.println("현재 max = " + max);
-                // ? 왜 출력이 안됨?
                 System.out.println("현재 top = " + top);
-                // ? 왜 출력이 안됨?
             }
             if (score[i] < min) {
                 min = score[i];
                 bottom = i;
             }
+            min = Math.min(score[i], max);
+            System.out.println(min);
         }
 
         System.out.println("평균: " + (double)total / score.length + "점");
