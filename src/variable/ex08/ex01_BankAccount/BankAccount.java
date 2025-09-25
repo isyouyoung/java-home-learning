@@ -1,4 +1,4 @@
-package variable.ex08.ex01;
+package variable.ex08.ex01_BankAccount;
 
 /**
  *  입금, 출금, 계좌조회, 이체기능

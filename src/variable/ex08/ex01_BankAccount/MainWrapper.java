@@ -1,4 +1,4 @@
-package variable.ex08.ex01;
+package variable.ex08.ex01_BankAccount;
 
 public class MainWrapper {
 
