@@ -30,12 +30,16 @@ public class Watch {
   public int getHour () {
     return this.hour;
   }
+
   /**
    *  필드 hour에 파라미터 param을 더하는 메소드<br>
    *  필드 hour값은 0 ~ 23사이의 값을 가질 수 있도록 처리해야 한다.
    *  파라미터 값이 0이하이면 처리하지 않는다.
    * @param param 증가시킬 시간 정보
    */
+  public void addHour (int hour) {
+    this.hour += hour;
+  }
 
 
   /**
@@ -59,5 +63,19 @@ public class Watch {
    *  파라미터 값이 0이하이면 처리하지 않는다.
    * @param param 증가시킬 초 정보
    */
+  public void addSecond (int second) {
+    if (this.second > 59) {
+      hour += second / 60;
+    }
+  }
 
+  public int getMinute () {
+    this.minute = this.hour * 60 + this.minute;
+    return this.minute;
+  }
+
+  public int getSecond () {
+    this.second = this.hour * 60 + this.second;
+    return this.second;
+  }
 }
