@@ -11,7 +11,7 @@ public class MainWrapper {
    watch.setHour(8);
 
    // 증가
-   watch.addHour(25);     // 1일 1시간
+   watch.addHour(25);     // 1일 1시간 //완료
    watch.addMinute(61);    // 1시간 1분
    watch.addSecond(3661);   // 1시간 1분 1초
    

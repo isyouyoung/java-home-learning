@@ -39,6 +39,9 @@ public class Watch {
    */
   public void addHour (int hour) {
     this.hour += hour;
+    if (this.hour > 23) {
+      this.hour = (this.hour + hour) % 24;
+    }
   }
 
 
