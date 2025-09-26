@@ -40,7 +40,7 @@ public class Watch {
   public void addHour (int hour) {
     this.hour += hour;
     if (this.hour > 23) {
-      this.hour = (this.hour + hour) % 24;
+      this.hour %= 24;
     }
   }
 
@@ -50,12 +50,14 @@ public class Watch {
    *  필드 minute값은 0 ~ 60사이의 값을 가질 수 있도록 처리해야 한다.<br>
    *  필드 minute값이 60이상이면 필드 hour 값도 증가시켜야 한다.<br>
    *  파라미터 값이 0이하이면 처리하지 않는다.
-   * @param param 증가시킬 분 정보
+   *  @param minute 증가시킬 분 정보
    */
   public void addMinute (int minute) {
+    this.minute += minute;
     if (this.minute > 59) {
-      hour += minute / 60;
-        minute %= 60;
+      this.hour += this.minute / 60;
+      this.minute %= 60;
+      System.out.println(this.minute);
     }
   }
 
@@ -64,7 +66,7 @@ public class Watch {
    *  필드 second값은 0 ~ 60사이의 값을 가질 수 있도록 처리해야 한다.<br>
    *  필드 second값이 60이상이면 필드 minute 값도 증가시켜야 한다.<br>
    *  파라미터 값이 0이하이면 처리하지 않는다.
-   * @param param 증가시킬 초 정보
+   * @param addSecond 증가시킬 초 정보
    */
   public void addSecond (int second) {
     if (this.second > 59) {
@@ -73,12 +75,10 @@ public class Watch {
   }
 
   public int getMinute () {
-    this.minute = this.hour * 60 + this.minute;
     return this.minute;
   }
 
   public int getSecond () {
-    this.second = this.hour * 60 + this.second;
     return this.second;
   }
 }

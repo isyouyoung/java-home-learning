@@ -8,7 +8,6 @@ public class MainWrapper {
    watch.setHour(9);
    watch.addMinute(40);
    watch.addSecond(30);
-   watch.setHour(8);
 
    // 증가
    watch.addHour(25);     // 1일 1시간 //완료
