@@ -15,26 +15,34 @@ public class Song {
   public void PlayTime() {
     System.out.println("재생시간: " + playtime + "분");
   }
+
   public void info() {
     Title();
     Genre();
     PlayTime();
   }
+  // 결국 이거실행이네 ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ
+
   public void setTitle(String title) {
     this.title = title;
   }
+
   public void setGenre(String genre) {
     this.genre = genre;
   }
+
   public void setPlayTime(double playtime) {
     this.playtime = playtime;
   }
+
   public String getTitle() {
     return title;
   }
+
   public String getGenre() {
     return genre;
   }
+
   public double getPlayTime() {
     return playtime;
   }
