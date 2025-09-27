@@ -6,14 +6,16 @@ public class MainWrapper {
    Watch watch = new Watch();
    
    watch.setHour(9);
-   watch.addMinute(40);
-   watch.addSecond(30);
+   watch.setMinute(40);
+   watch.setSecond(30);
+   System.out.println("현재 설정된 시간 " + watch.checkTime());
+   System.out.println();
 
    // 증가
    watch.addHour(25);     // 1일 1시간 //완료
    watch.addMinute(61);    // 1시간 1분
    watch.addSecond(3661);   // 1시간 1분 1초
-   
+
    System.out.println("시: " + watch.getHour());         // 시: 12
    System.out.println("분: " + watch.getMinute());       // 분: 42
    System.out.println("초: " + watch.getSecond());       // 초: 31
