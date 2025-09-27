@@ -19,6 +19,6 @@ public class Soldier {
     gun.shoot(); // 쏨
   }
   
-  
+  // 마지막 잔디확인
   
 }
