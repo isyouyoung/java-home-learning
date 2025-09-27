@@ -61,7 +61,7 @@ public class Watch {
     if (this.minute > 59) {
       this.hour += this.minute / 60;
       this.minute %= 60;
-      System.out.println("디스미닛 = " + this.minute);
+      // 합 분이 60분을 넘어갈경우 60이하로 바꿔야함
     }
   }
 
@@ -70,12 +70,22 @@ public class Watch {
    *  필드 second값은 0 ~ 60사이의 값을 가질 수 있도록 처리해야 한다.<br>
    *  필드 second값이 60이상이면 필드 minute 값도 증가시켜야 한다.<br>
    *  파라미터 값이 0이하이면 처리하지 않는다.
-   * @param addSecond 증가시킬 초 정보
+   * @param second 증가시킬 초 정보
    */
   public void addSecond (int second) {
-    if (second > 59) {
-      this.minute += second / 60;
-      System.out.println("디스세컨드 = " + this.minute);
+    this.second += second;
+    if (this.second > 59) {
+      this.minute += this.second / 60;
+      this.second %= 60;
+    }
+
+    if (this.minute > 59) {
+      this.hour += this.minute / 60;
+      this.minute %= 60;
+    }
+
+    if (this.hour > 23) {
+      this.hour %= 24;
     }
   }
 
