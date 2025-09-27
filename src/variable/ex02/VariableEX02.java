@@ -1,4 +1,4 @@
-package variable;
+package variable.ex02;
 
 import java.util.Scanner;
 

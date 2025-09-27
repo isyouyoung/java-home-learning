@@ -1,6 +1,4 @@
-package variable;
-
-import java.util.Arrays;
+package variable.ex05;
 
 public class VariableEX05 {
     public static void ex01() {

@@ -1,4 +1,4 @@
-package variable;
+package variable.ex04;
 
 import java.util.Arrays;
 

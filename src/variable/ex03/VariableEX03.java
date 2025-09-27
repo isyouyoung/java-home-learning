@@ -1,6 +1,4 @@
-package variable;
-
-import jdk.swing.interop.SwingInterOpUtils;
+package variable.ex03;
 
 import java.util.Scanner;
 
