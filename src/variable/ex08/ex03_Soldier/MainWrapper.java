@@ -16,5 +16,6 @@ public class MainWrapper {
    s.shoot();
    s.shoot();
   }
+  // 잔디 이제되네 2
 
 }
