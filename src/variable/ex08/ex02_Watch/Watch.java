@@ -8,34 +8,38 @@ package variable.ex08.ex02_Watch;
  * @version 1.0
  */
 public class Watch {
+
+  private int hour;
+  private int minute;
+  private int second;
+
+  // 조회용 함수 추가
+  public String checkTime () {
+    return this.hour + ":" + this.minute + ":" + this.second;
+  }
+
   /**
    * 시간 정보를 저장하는 필드. 0 ~ 23 사이의 값
    */
-  private int hour;
-
-  /**
-   * 분 정보를 저장하는 필드. 0 ~ 59 사이의 값
-   */
-  private int minute;
-
-  /**
-   * 초 정보를 저장하는 필드. 0 ~ 59 사이의 값
-   */
-  private int second;
-
   public void setHour (int hour) {
     this.hour = hour;
   }
 
-  public int getHour () {
-    return this.hour;
-  }
+  /**
+   * 분 정보를 저장하는 필드. 0 ~ 59 사이의 값
+   */
+  public void setMinute (int minute) { this.minute = minute; };
+
+  /**
+   * 초 정보를 저장하는 필드. 0 ~ 59 사이의 값
+   */
+  public void setSecond (int second) { this.second = second; };
 
   /**
    *  필드 hour에 파라미터 param을 더하는 메소드<br>
    *  필드 hour값은 0 ~ 23사이의 값을 가질 수 있도록 처리해야 한다.
    *  파라미터 값이 0이하이면 처리하지 않는다.
-   * @param param 증가시킬 시간 정보
+   * @param hour 증가시킬 시간 정보
    */
   public void addHour (int hour) {
     this.hour += hour;
@@ -57,7 +61,7 @@ public class Watch {
     if (this.minute > 59) {
       this.hour += this.minute / 60;
       this.minute %= 60;
-      System.out.println(this.minute);
+      System.out.println("디스미닛 = " + this.minute);
     }
   }
 
@@ -69,9 +73,15 @@ public class Watch {
    * @param addSecond 증가시킬 초 정보
    */
   public void addSecond (int second) {
-    if (this.second > 59) {
-      hour += second / 60;
+    if (second > 59) {
+      this.minute += second / 60;
+      System.out.println("디스세컨드 = " + this.minute);
     }
+  }
+
+
+  public int getHour () {
+    return this.hour;
   }
 
   public int getMinute () {
@@ -81,4 +91,8 @@ public class Watch {
   public int getSecond () {
     return this.second;
   }
+
+
+
 }
+
