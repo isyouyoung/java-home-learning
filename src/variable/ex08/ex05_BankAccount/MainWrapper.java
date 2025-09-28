@@ -97,26 +97,24 @@ public class MainWrapper {
     // getBalance를 실행해서 리턴값 balance를 가져와라 이건가보네!!!!!!!!!!!!!
 
     System.out.println("개설지점: " + member1.getBankAcc().getBank().getFAccName());
-    // 그럼 이것도 같다....이번엔 acc의 즉 뱅크어카운트의 getBank인대
-    // this.bacnk이므로 먼저쓴 뱅크를 찾아보면 setBank에 있음
-    // 이것도 결국 뱅크1이네 ㅋㅋ 앞에 3단어가 ㅋㅋㅋ 뱅크1에 getFaccName찾아보자
-    // 즉 member1.getBankACC = ACC고 뱅크어카운트에서 찾아보면 getBank가 있음
-    // 여기서 return뱅크니까 bank를 다시 찾아가면 위엣 먼저 setBank를 했음
-    // 그걸 따라가면 여기 29번째줄 나옴 여기서 시작 그럼 결국
-    // 가르키는건 Bank임ㅋㅋㅋ 3단어가 다 뱅크를 가르킴 맞는지 확인하려면
-    // bank에 getFAccName이 있어야함 찾아보는중
-    // 캬 있습니다!!!!!!! 그럼 결국 그냥 이거 출력이네
-    //   public String getFAccName() {
-    //    return fAccName;
-    //  }
-    // 찾아가는게 개핼이다 물어보자 ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ
+//    그럼 이것도 같다....이번엔 acc의 즉 뱅크어카운트의 getBank인대
+//     this.bacnk이므로 먼저쓴 뱅크를 찾아보면 setBank에 있음
+//     이것도 결국 뱅크1이네 ㅋㅋ 앞에 3단어가 ㅋㅋㅋ 뱅크1에 getFaccName찾아보자
+//     즉 member1.getBankACC = ACC고 뱅크어카운트에서 찾아보면 getBank가 있음
+//     여기서 return뱅크니까 bank를 다시 찾아가면 위엣 먼저 setBank를 했음
+//     그걸 따라가면 여기 29번째줄 나옴 여기서 시작 그럼 결국
+//     가르키는건 Bank임ㅋㅋㅋ 3단어가 다 뱅크를 가르킴 맞는지 확인하려면
+//     bank에 getFAccName이 있어야함 찾아보는중
+//     캬 있습니다!!!!!!! 그럼 결국 그냥 이거 출력이네
+//       public String getFAccName() {
+//        return fAccName;
+//      }
+//     찾아가는게 개핼이다 물어보자 ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ
 
     System.out.println("지점연락처: " + member1.getBankAcc().getBank().getFTelNo());
     // 이것도 똑같으니까 뱅크에 있겠네 결국 뱅크에있는 getFTelNO 출력이겠네
     // 결국 간단하게 Bank에 fTelNo 실행하라는거잖아 ㅋㅋㅋㅋㅋㅋㅋ
 
-    
-    
     Bank bank2 = new Bank();
     // 아오 이제 드디어 다음?이다 뱅크 2생성
     bank2.setFAccName("국민은행");

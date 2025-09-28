@@ -7,16 +7,21 @@ public class BankMember {
   public BankMember(String memName, BankAccount bankAcc) {
     this.memName = memName;
     this.bankAcc = bankAcc;
-    
   }
+
   public BankMember() {
-    
   }
+
   public void info() {
     System.out.println("고객명: " + memName);
     bankAcc.info();
   }
-  // 입금
+
+  /**
+   * 입금함수
+   * balanceIn 함수이다
+   * @param money (long타입 money를 인자로 받는다)
+   */
   public void balanceIn(long money) {
     bankAcc.balanceIn(money);
   }
@@ -41,17 +46,13 @@ public class BankMember {
   
   
   // 이체
-  
   public void transfer(BankMember bankMem, long money) {
     bankMem.balanceIn(balanceOut(money));
     // 뱅크맴버 클래스로 잘 받았는대 bankMem은 이름인듯그냥
     // 맞다고함 아무거나 바꿀수있고 balanceIn찾으면 됨
     // 10000이였는대 출금 10000했으니까 0
   }
-  
-  
-  
-  
+
   public void setMemName(String memName) {
     this.memName = memName;
   }

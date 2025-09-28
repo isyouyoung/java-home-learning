@@ -7,16 +7,16 @@ public class Soldier {
   
   public Soldier(int bullet) {
     // 30받았으니 매개변수로
-    gun = new Gun(bullet);
+    this.gun = new Gun(bullet);
     // 이제 객체 생성함 30 넣어서 gun에 저장
   }
   public void reload(int bullet) {
     // 재장전할건대 처음엔 30발 넣음
-    gun.reload(bullet);
+    this.gun.reload(bullet);
     // 실제 건에서 리로드 찾아서 30발 넣음
   }
   public void shoot() {
-    gun.shoot(); // 쏨
+    this.gun.shoot(); // 쏨
   }
   
   // 마지막 잔디확인
