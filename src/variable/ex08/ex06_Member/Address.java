@@ -1,11 +1,12 @@
 package variable.ex08.ex06_Member;
 
 public class Address {
+
   private String postCode;
   private String roadAddr;
   private String jibunAddr;
   private String detailAddr;
-  
+
   public void setPostCode(String postCode) {
     this.postCode = postCode;
   }
@@ -23,19 +24,19 @@ public class Address {
   }
 
   public String getPostCode() {
-    return postCode;
+    return this.postCode;
   }
 
   public String getRoadAddr() {
-    return roadAddr;
+    return this.roadAddr;
   }
 
   public String getJibunAddr() {
-    return jibunAddr;
+    return this.jibunAddr;
   }
 
   public String getDetailAddr() {
-    return detailAddr;
+    return this.detailAddr;
   }
-  
+
 }
