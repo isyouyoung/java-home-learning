@@ -29,9 +29,22 @@ public class Bakery {
     return this.count;
   }
 
+  public int getPRICE() {
+    return this.PRICE;
+  }
+
   public Bakery(int count, int money) {
     this.count = count;
     this.money = money;
+  }
+
+  public void sell(int count) {
+    if (count == 0) {
+      System.out.println("빵을 못산다");
+      return;
+    }
+    this.count -= count;
+    this.money += count * PRICE;
   }
 
 }
