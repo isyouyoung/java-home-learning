@@ -8,7 +8,7 @@ public class MainWrapper {
    watch.setHour(9);
    watch.setMinute(40);
    watch.setSecond(30);
-   System.out.println("현재 기본으로 설정된 시간 " + watch.checkTime());
+//   System.out.println("현재 기본으로 설정된 시간 " + watch.checkTime());
    System.out.println();
 
    // 증가
